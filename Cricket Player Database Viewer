@@ -1,0 +1,170 @@
+package CollectionFrameWork;
+public class PlayersNames{
+    private String name;
+    private int jerseyNo;
+    private String country;
+    private String teamName;
+    private String role;
+    private double price;
+    private int age;
+    private int matchesPlayed;
+    private int runsScored;
+    PlayersNames(String name,int jerseyNo,String country,String teamName,String role,double price,int age,int matchesPlayed,int runsScored)
+    {
+        this.name=name;
+        this.jerseyNo=jerseyNo;
+        this.country=country;
+        this.teamName=teamName;
+        this.role=role;
+        this.price=price;
+        this.age=age;
+        this.matchesPlayed=matchesPlayed;
+        this.runsScored=runsScored;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public void setName(String name)
+    {
+        this.name=name;
+    }
+    public int getJerseyNo()
+    {
+        return jerseyNo;
+    }
+    public void setJerseyNo(int jerseyNo)
+    {
+        this.jerseyNo=jerseyNo;
+    }
+    public String getCountry()
+    {
+        return country;
+    }
+    public void setCountry(String country)
+    {
+        this.country=country;
+    }
+    public String getTeamName()
+    {
+        return teamName;
+    }
+    public void setTeamName(String teamName)
+    {
+        this.teamName=teamName;
+    }
+    public String getRole()
+    {
+        return role;
+    }
+    public void setRole(String role)
+    {
+        this.role=role;
+    }
+    public double getPrice()
+    {
+        return price;
+    }
+    public void setPrice(double price)
+    {
+        this.price=price;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+    public void setAge(int age)
+    {
+        this.age=age;
+    }
+    public int getMatchesPlayed()
+    {
+        return matchesPlayed;
+    }
+    public void setMatchesPlayed(int matchesPlayed)
+    {
+        this.matchesPlayed=matchesPlayed;
+    }
+    public int getRunsScored()
+    {
+        return runsScored;
+    }
+    public void setRunsScored(int runsScored)
+    {
+        this.runsScored=runsScored;
+    }
+    public String toString()
+    {
+        return "PlayersNames [name=" + name + ", jerseyNo=" + jerseyNo + ", country=" + country + ", teamName="
+                + teamName + ", role=" + role + ", price=" + price + ", age=" + age + ", matchesPlayed="
+                + matchesPlayed + ", runsScored=" + runsScored + "]";
+    }
+}
+package CollectionFrameWork;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class PlayerProfile {
+
+    PlayersNames p1 = new PlayersNames("MV Srinuvasulu", 05, "India", "Chennai Super Kings",
+            "All-Rounder", 3500000, 20, 15, 500);
+
+    PlayersNames p2 = new PlayersNames("S Raja", 07, "India", "Chennai Super Kings",
+            "Batsman", 2500000, 37, 20000, 5000);
+
+    PlayersNames p3 = new PlayersNames("Mahendra Reddy", 10, "India", "Sunrisers Hyderabad",
+            "Bowler", 3000000, 29, 18000, 1500);
+
+    PlayersNames p4 = new PlayersNames("Ganesh Reddy", 21, "India", "Chennai Super Kings",
+            "All-Rounder", 4000000, 25, 5630, 2600);
+
+    PlayersNames p5 = new PlayersNames("Y Raja", 35, "Australia", "Chennai Super Kings",
+            "Batsman", 5000000, 31, 1829, 900);
+
+    PlayersNames p6 = new PlayersNames("p Mahendra", 36, "New Zealand", "Chennai Super Kings",
+            "Bowler", 6000000, 28, 8261, 1200);
+
+    PlayersNames p7 = new PlayersNames("Anil Kumer", 18, "South Africa", "Chennai Super Kings",
+            "All-Rounder", 67218, 67, 5162, 3100);
+
+    PlayersNames p8 = new PlayersNames("Madhu", 67, "India", "Chennai Super Kings",
+            "Batsman", 6821, 76, 1324, 700);
+
+    PlayersNames p9 = new PlayersNames("Tirumula Reddy", 122, "India", "Chennai Super Kings",
+            "Wicket-keeper", 46161, 53, 718, 400);
+
+    PlayersNames p10 = new PlayersNames("Sharath", 45, "India", "Chennai Super Kings",
+            "Bowler", 56357, 65, 4347, 1800);
+
+    PlayersNames p11 = new PlayersNames("Madhava Reddy", 46, "India", "Chennai Super Kings",
+            "All-Rounder", 46738, 64, 178, 95);
+
+    public void display() {
+        ArrayList<PlayersNames> list = new ArrayList<>();
+
+        list.add(p1);
+        list.add(p2);
+        list.add(p3);
+        list.add(p4);
+        list.add(p5);
+        list.add(p6);
+        list.add(p7);
+        list.add(p8);
+        list.add(p9);
+        list.add(p10);
+        list.add(p11);
+
+        // Reverse printing using ListIterator
+        Iterator<PlayersNames> it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println("\n"+it.next());
+        }
+    }
+
+    public static void main(String[] args) {
+        PlayerProfile p = new PlayerProfile();
+        p.display();
+    }
+}
+
